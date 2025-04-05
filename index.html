@@ -3,76 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Enfield Clone - Advanced</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Royal Enfield | Legendary Motorcycles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <div class="loader">
+        <div class="loader-bike"></div>
+    </div>
+
     <header>
         <nav>
-            <div class="logo">Royal Enfield</div>
+            <div class="logo">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logo.png" alt="Royal Enfield Logo">
+            </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#models" class="nav-link">Models</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-cta">Book a Test Ride</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to Royal Enfield</h1>
-            <p>Experience the thrill of riding with Subham</p>
-            <button class="cta">Explore Models</button>
+            <h1 data-text="Royal Enfield">Royal Enfield</h1>
+            <p class="tagline">Made Like a Gun. Goes Like a Bullet.</p>
+            <p class="subtext">Experience the legacy of authentic motorcycling</p>
+            <div class="hero-buttons">
+                <button class="cta primary">Explore Models</button>
+                <button class="cta secondary">Book a Test Ride</button>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
         <div class="hero-image">
             <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/motorcycles/classic-350/colors/studio-shots/dual-channel/chrome-red/01-chrome-red.png" 
-                alt="Royal Enfield Bike" width="1000" height="500">
+                alt="Royal Enfield Bike" class="bike-img">
+            <div class="floating-elements">
+                <div class="floating-circle circle-1"></div>
+                <div class="floating-circle circle-2"></div>
+                <div class="floating-circle circle-3"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
     </section>
 
     <section id="models" class="models">
-        <h2>Our Models</h2>
+        <div class="section-header">
+            <h2>Our Legendary Models</h2>
+            <div class="underline"></div>
+        </div>
         <div class="model-grid">
             <div class="model-card">
-                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/183389/classic-350-right-front-three-quarter-2.jpeg?isig=0&q=80" alt="Subham" class="model-image">
-                <h3>Classic 350</h3>
-                <p>Timeless design with modern engineering.</p>
+                <div class="model-badge">Best Seller</div>
+                <div class="model-image-container">
+                    <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/183389/classic-350-right-front-three-quarter-2.jpeg?isig=0&q=80" 
+                         alt="Classic 350" class="model-image">
+                </div>
+                <div class="model-info">
+                    <h3>Classic 350</h3>
+                    <p class="price">Starting at ₹1,93,080</p>
+                    <p>Timeless design with modern engineering.</p>
+                    <div class="model-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>120 km/h</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>35 kmpl</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>349cc</span>
+                        </div>
+                    </div>
+                    <button class="model-cta">View Details</button>
+                </div>
             </div>
+            
             <div class="model-card">
-                <img src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/studio-shots/webp/hanle-black/hanle-black-000.webp" alt="Subham" class="model-image">
-                <h3>Himalayan</h3>
-                <p>Built for the adventurer in you.</p>
+                <div class="model-badge">Adventure</div>
+                <div class="model-image-container">
+                    <img src="https://www.royalenfield.com/content/dam/royal-enfield/motorcycles/himalayan/colors/studio-shots/webp/hanle-black/hanle-black-000.webp" 
+                         alt="Himalayan" class="model-image">
+                </div>
+                <div class="model-info">
+                    <h3>Himalayan</h3>
+                    <p class="price">Starting at ₹2,16,677</p>
+                    <p>Built for the adventurer in you.</p>
+                    <div class="model-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>140 km/h</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>30 kmpl</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>411cc</span>
+                        </div>
+                    </div>
+                    <button class="model-cta">View Details</button>
+                </div>
             </div>
+            
             <div class="model-card">
-                <img src="https://gobikes-prod-public.s3.ap-south-1.amazonaws.com/uploads/admin/bike/70a49ee3-e87c-4107-a302-c703f90692e9.png" alt="Subham" class="model-image">
-                <h3>Meteor 350</h3>
-                <p>Cruise in style and comfort.</p>
+                <div class="model-badge">New Launch</div>
+                <div class="model-image-container">
+                    <img src="https://gobikes-prod-public.s3.ap-south-1.amazonaws.com/uploads/admin/bike/70a49ee3-e87c-4107-a302-c703f90692e9.png" 
+                         alt="Meteor 350" class="model-image">
+                </div>
+                <div class="model-info">
+                    <h3>Meteor 350</h3>
+                    <p class="price">Starting at ₹2,03,571</p>
+                    <p>Cruise in style and comfort.</p>
+                    <div class="model-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>120 km/h</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <span>35 kmpl</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>349cc</span>
+                        </div>
+                    </div>
+                    <button class="model-cta">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="section-header">
+            <h2>Why Choose Royal Enfield</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3>Legacy</h3>
+                <p>Over 120 years of motorcycling heritage and craftsmanship.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Engineering</h3>
+                <p>Robust and reliable engines built for the long haul.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Community</h3>
+                <p>Join millions of riders worldwide in our RE community.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Service</h3>
+                <p>Extensive service network across 60+ countries.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>Royal Enfield is a legendary brand that has been synonymous with motorcycling for over a century. With Subham, we continue to innovate and inspire riders around the world.</p>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="section-header">
+                    <h2>Our Story</h2>
+                    <div class="underline"></div>
+                </div>
+                <p>Royal Enfield is the oldest global motorcycle brand in continuous production since 1901. From making motorcycles for the British Army in World War I to becoming a global leader in the middleweight motorcycle segment, we've come a long way.</p>
+                <p>Today, Royal Enfield is the leader in the mid-size motorcycle market in India, with a growing international footprint. Our motorcycles are modern classics that embody a simple, uncluttered, and timeless design philosophy.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="120">0</div>
+                        <div class="stat-label">Years of Legacy</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="60">0</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1000">0</div>
+                        <div class="stat-label">Dealerships</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/history/our-story/1920x1080/1920x1080-our-story-1.jpg" alt="Royal Enfield History">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Rider Experiences</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-card active">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"The Classic 350 is more than a motorcycle - it's an emotion. The thump of the engine is addictive, and the riding experience is pure joy."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rider">
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <span>Classic 350 Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"I've taken my Himalayan to places I never dreamed possible. It's the perfect companion for adventure, both on and off the road."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rider">
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <span>Himalayan Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"The Meteor 350 is the perfect blend of comfort and style. Long rides feel effortless, and the bike turns heads wherever I go."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Rider">
+                        <div class="author-info">
+                            <h4>Arun Patel</h4>
+                            <span>Meteor 350 Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <div class="underline"></div>
+                </div>
+                <p>Have questions about our motorcycles or need assistance? Our team is here to help you.</p>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Headquarters</h4>
+                        <p>Royal Enfield, Chennai, India</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 44 4343 4343</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@royalenfield.com</p>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject">
+                            <option value="">Select Subject</option>
+                            <option value="test-ride">Book a Test Ride</option>
+                            <option value="service">Service Inquiry</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest updates on new models, events, and exclusive offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Royal Enfield. All rights reserved. | Designed by Subham</p>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://www.royalenfield.com/content/dam/royal-enfield/india/logo.png" alt="Royal Enfield Logo">
+                <p>Made Like a Gun. Goes Like a Bullet.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#models">Models</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Dealer Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Service Centers</a></li>
+                    <li><a href="#">Spare Parts</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Recall Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Royal Enfield. All rights reserved. | Designed by Subham.</p>
+        </div>
     </footer>
 
-    <script src="index.js"></script> 
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
