@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
 });
 const hamburger = document.querySelector('.hamburger');
 // const navLinks = document.querySelector('.nav-links');
+
 const navLinkItems = document.querySelectorAll('.nav-link');
 const navLinks = document.querySelector('.nav-links');
 
@@ -23,6 +24,8 @@ navLinkItems.forEach(item => {
         navLinks.classList.remove('active');
         // hamburger.classList.remove('active');
         // navLinks.classList.remove('active');
+        // const navLinks = document.querySelector('.nav-links');
+
     });
 });
 
