@@ -7,7 +7,9 @@ window.addEventListener('load', function() {
         }, 500);
     }, 1500);
 });
+// const hamburger = document.querySelector('.hamburger');
 const hamburger = document.querySelector('.hamburger');
+
 // const navLinks = document.querySelector('.nav-links');
 
 const navLinkItems = document.querySelectorAll('.nav-link');
